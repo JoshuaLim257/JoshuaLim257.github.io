@@ -3,10 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cats</title>
     <script src="main.js" defer></script> <!--JS-->
     <link href="style.css" type="text/css" rel="stylesheet"> <!--CSS-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- get icons from https://www.favicon.cc -->
+    <link rel="manifest" href="manifest.json" />
 </head>
 
 <body>
@@ -27,7 +32,8 @@
             <li><button id="page3btn">Domestic and Wild</button></li>
             <li><button id="page4btn">Cats Around Us</button></li>
             <li><button id="page5btn">Cats in Social Media</button></li>
-            <li><button id="meowSoundsbutton">Play Meows</button></li> <!--Meowing noises which can be turned on and off (plays every 7 seconds)-->
+            <li><button id="meowSoundsbutton">Play Meows</button></li>
+            <!--Meowing noises which can be turned on and off (plays every 7 seconds)-->
         </ul>
     </nav>
     <main id="pagecontainer"> <!--subtopic pages are in here (home shows on default)-->
@@ -39,7 +45,7 @@
                 <h3 id="homeheader2">Discover their lives, beauty and global charm.</h3>
             </div>
             <article class="content"> <!--All content goes in here-->
-                <div class="content-box"> 
+                <div class="content-box">
                     <p id="main-content">Whether you're a curious cat lover, a pet parent, or just someone who enjoys
                         cat memes, this site
                         will walk you through the fascinating lives of cats, from household companions to wild
@@ -68,7 +74,8 @@
                     <p id="score" class="remove">Score</p> <!--Stays hidden till game starts-->
                     <p id="timer" class="remove">Time: 15</p> <!--Stays hidden till game starts-->
                     <div class="board">
-                        <img src="images/laser.jpg" alt="laser" id="laser" class="remove"> <!--Stays hidden till game starts-->
+                        <img src="images/laser.jpg" alt="laser" id="laser" class="remove">
+                        <!--Stays hidden till game starts-->
                     </div>
                 </div>
             </article>
@@ -83,9 +90,11 @@
             </div>
             <article class="content" id="contentpage2">
                 <div>
-                    <img src="images/cat-lc.png" alt="Cat Life Cycle" title="Cat Life Cycle" id="catlc"> <!--picture of cat in life cycle-->
+                    <img src="images/cat-lc.png" alt="Cat Life Cycle" title="Cat Life Cycle" id="catlc">
+                    <!--picture of cat in life cycle-->
                 </div>
-                <div class="content-box" id="table-container"> <!--tables placed in here--> <!--800px: 1 col, >800px: 2col-->
+                <div class="content-box" id="table-container"> <!--tables placed in here-->
+                    <!--800px: 1 col, >800px: 2col-->
                     <table>
                         <tr>
                             <th>Life Stage</th>
@@ -307,7 +316,8 @@
             </div>
             <article class="content">
                 <div class="content-box" id="sea-content">
-                    <img src="images/sea-map.jpg" alt="Southeast Asia Map" usemap="#image-map" id="sea-map"> <!--image map-->
+                    <img src="images/sea-map.jpg" alt="Southeast Asia Map" usemap="#image-map" id="sea-map">
+                    <!--image map-->
                     <map name="image-map"> <!--click on country name to view its' cats-->
                         <area id="Myanmar" title="Myanmar" alt="Myanmar" coords="5,81,77,97" shape="rect" href="#">
                         <area id="Vietnam" title="Vietnam" alt="Vietnam" coords="121,79,183,95" shape="rect" href="#">
@@ -332,7 +342,8 @@
                         <div id="country-base"> <!--cats info pops up here when country is clicked-->
                             Click a country's name to view it's regional breeds.
                         </div>
-                        <div class="country" id="country1"> <!--list of countries and their regional cat breed/common cats breed-->
+                        <div class="country" id="country1">
+                            <!--list of countries and their regional cat breed/common cats breed-->
                             <h3>Myanmar: Burmese Cat</h3>
                             <p>Burmese cats are known for their affectionate, people-oriented nature and silky, short
                                 coats. Originating in Myanmar, they are muscular yet elegant, often forming strong bonds

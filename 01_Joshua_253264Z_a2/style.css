@@ -163,7 +163,7 @@ h3 {
 
 
 main {
-    margin-top: 400px 50px 0 50px; /* navbar and header height = 200 + 75 (leave space for gaps)*/
+    margin: 400px 50px 0 50px; /* navbar and header height = 200 + 75 (leave space for gaps)*/
 }
 
 .page {
