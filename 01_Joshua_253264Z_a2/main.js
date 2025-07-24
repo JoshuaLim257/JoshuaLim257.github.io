@@ -84,26 +84,15 @@ window.addEventListener('scroll', function () { //after scrolled down
     }
 });
 
+//event delegation
+const cardContainer = document.querySelector(".sub-box3");      
 
-
-const card1 = document.querySelector(".card1"); //card elements
-const card2 = document.querySelector(".card2");
-const card3 = document.querySelector(".card3");
-const card4 = document.querySelector(".card4");
-
-card1.addEventListener("click", function () { //listens to click event on all cards and add/removes the flip class to the cards
-    card1.classList.toggle("flip");
+cardContainer.addEventListener("click", function(e) {           //adds a click event onto .sub-box3, any click inside this triggers the function
+    const clickedCard = e.target.closest(".card_");             //e.target = element that was clicked .closest() searchs for the closest ancestor or itself with a .card_ class
+    if (clickedCard) {                                          //if line 91 returns true, runs this
+        clickedCard.classList.toggle("flip");                   //toggles classes in css
+    }
 });
-card2.addEventListener("click", function () {
-    card2.classList.toggle("flip");
-});
-card3.addEventListener("click", function () {
-    card3.classList.toggle("flip");
-});
-card4.addEventListener("click", function () {
-    card4.classList.toggle("flip");
-});
-
 
 
 const startbtn = document.getElementById("startbtn");       //button to start game
