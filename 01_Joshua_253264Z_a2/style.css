@@ -1,14 +1,14 @@
 * {
     text-decoration: none;
-    margin: 0; 
-    padding: 0; 
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 
 
 /*fonts*/
-@font-face { 
+@font-face {
     font-family: Meows;
     src: url(fonts/meows-font/Meows-VGWjy.ttf);
 }
@@ -36,7 +36,8 @@
 
 body {
     background: #bebe97;
-    padding-top: 60px; /*gives space between navbar and content box*/
+    padding-top: 60px;
+    /*gives space between navbar and content box*/
 }
 
 h1 {
@@ -51,18 +52,24 @@ h3 {
     font-size: 1.5em;
 }
 
-#catHeader { /*banner*/
-    position: fixed; /*position doesnt move*/
+#catHeader {
+    /*banner*/
+    position: fixed;
+    /*position doesnt move*/
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /*full screen*/
-    overflow: hidden; /*hides excess*/
+    height: 100vh;
+    /*full screen*/
+    overflow: hidden;
+    /*hides excess*/
     transition: height 0.4s ease;
-    z-index: 2000; /*appears on top of everything else*/
+    z-index: 2000;
+    /*appears on top of everything else*/
 }
 
-#catHeader.shrink { /*shrunken banner after scrolled*/
+#catHeader.shrink {
+    /*shrunken banner after scrolled*/
     height: 200px;
 }
 
@@ -70,18 +77,24 @@ h3 {
 .cat-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /*fill its container entirely*/
+    object-fit: cover;
+    /*fill its container entirely*/
 }
 
 .title {
-    position: absolute; /*positioned relative to the positioned parent*/
-    top: 50%; /*puts top left corner at center*/
+    position: absolute;
+    /*positioned relative to the positioned parent*/
+    top: 50%;
+    /*puts top left corner at center*/
     left: 50%;
-    transform: translate(-50%, -50%); /*puts element at center*/
+    transform: translate(-50%, -50%);
+    /*puts element at center*/
     color: white;
     font-size: 10vw;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /*creates a shadow, adding "depth"*/
-    transition: font-size 0.4s ease; /*the title shrinks smoothly*/
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    /*creates a shadow, adding "depth"*/
+    transition: font-size 0.4s ease;
+    /*the title shrinks smoothly*/
     font-family: Meows, 'Ariel';
 }
 
@@ -91,22 +104,27 @@ h3 {
 
 
 .navbar {
-    position: fixed; /*doesnt move when screen is scrolled down, stays at down, right below shrunken banner*/
+    position: fixed;
+    /*doesnt move when screen is scrolled down, stays at down, right below shrunken banner*/
     top: 100vh;
     left: 0;
     width: 100%;
     height: 75px;
     background: #7D8CA3;
     display: flex;
-    flex-wrap: wrap; /*allows nav list to go to next row when <800px*/
+    flex-wrap: wrap;
+    /*allows nav list to go to next row when <800px*/
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
-    transition: top 0.4s ease; /*slides up to top smoothly*/
-    z-index: 1500; /*appears 2nd top of everything else (below top banner so it doesnt show at 1st, on top of rest so it still pops up after page is scrolled down and other elm are below it)*/
+    transition: top 0.4s ease;
+    /*slides up to top smoothly*/
+    z-index: 1500;
+    /*appears 2nd top of everything else (below top banner so it doesnt show at 1st, on top of rest so it still pops up after page is scrolled down and other elm are below it)*/
 }
 
-#catHeader.shrink~.navbar { /*after scrolling, selects sibling ".navbar" (that comes after in html) and also sets its top to 200px*/
+#catHeader.shrink~.navbar {
+    /*after scrolling, selects sibling ".navbar" (that comes after in html) and also sets its top to 200px*/
     top: 200px;
 }
 
@@ -114,25 +132,34 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    list-style: none; /*removes the dot and underline*/
-    justify-content: space-around; /*equal space between elements, space before 1st and after last are equally split*/
-    vertical-align: middle; /*listed items vertically stay in the middle*/
-    align-items: center; /*listed items stay in the middle*/
+    list-style: none;
+    /*removes the dot and underline*/
+    justify-content: space-around;
+    /*equal space between elements, space before 1st and after last are equally split*/
+    vertical-align: middle;
+    /*listed items vertically stay in the middle*/
+    align-items: center;
+    /*listed items stay in the middle*/
 }
 
 .navbar li {
-    width: 16%; /*equally divided into 6*/
-    text-align: center; /*subtopics stay in middle*/
+    width: 16%;
+    /*equally divided into 6*/
+    text-align: center;
+    /*subtopics stay in middle*/
 }
 
 .navbar li button {
-    all: unset; /*reset all properties*/
-    cursor: pointer; /*makes cursor turn into pointer form when hovering*/
+    all: unset;
+    /*reset all properties*/
+    cursor: pointer;
+    /*makes cursor turn into pointer form when hovering*/
     color: white;
     font-weight: bold;
     font-size: 1.5vw;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 15px 10px; /*15px top and bottom, 10px left and right*/
+    padding: 15px 10px;
+    /*15px top and bottom, 10px left and right*/
     text-align: center;
     display: block;
     width: 100%;
@@ -141,8 +168,10 @@ h3 {
 .navbar li button:hover {
     color: #2E2E2E;
     background-color: #D4A5A5;
-    transform: scale(1.2); /*becomes bigger when hovered over*/
-    transition: transform 0.5s; /*text scaling becomes smooth*/
+    transform: scale(1.2);
+    /*becomes bigger when hovered over*/
+    transition: transform 0.5s;
+    /*text scaling becomes smooth*/
 }
 
 #meowSoundsbutton {
@@ -164,15 +193,19 @@ h3 {
 
 
 main {
-    margin: 400px 50px 0 50px; /* navbar and header height = 200 + 75 (leave space for gaps)*/
+    margin: 400px 50px 0 50px;
+    /* navbar and header height = 200 + 75 (leave space for gaps)*/
 }
 
 .page {
     width: 100%;
-    height: auto; /*corresponds to the elements inside, made to fit*/
-    border-radius: 50px; /*rounded corners*/
+    height: auto;
+    /*corresponds to the elements inside, made to fit*/
+    border-radius: 50px;
+    /*rounded corners*/
     background-color: #F7F1E1;
-    margin-bottom: 50px; /*spacing below and outside of .page is cleared by 50px*/
+    margin-bottom: 50px;
+    /*spacing below and outside of .page is cleared by 50px*/
 }
 
 
@@ -186,13 +219,14 @@ main {
     width: 100%;
     height: auto;
     position: relative;
-    border-radius: 20px 20px 0 0; /* top left and top left corners are rounded, other 2 corners arent*/
+    border-radius: 20px 20px 0 0;
+    /* top left and top left corners are rounded, other 2 corners arent*/
 }
 
 .image-container h2 {
     position: absolute;
     color: white;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     font-size: 3.5vw;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     font-family: Meows, sans-serif;
@@ -207,7 +241,8 @@ main {
     font-size: 2vw;
 }
 
-#homeheader1 { /*customizing each header's location*/
+#homeheader1 {
+    /*customizing each header's location*/
     top: 35%;
     left: 70%;
 }
@@ -310,7 +345,7 @@ main {
 .board {
     background-color: #f6f6f6;
     width: 100%;
-    height: 550px;
+    height: 50vh;
     border: 7px solid black;
     justify-items: center;
     position: relative;
@@ -321,11 +356,13 @@ main {
     width: 2vw;
     height: auto;
     cursor: pointer;
-    transition: top 0.3s, left 0.3s; /*switches positions smoothly*/
+    transition: top 0.3s, left 0.3s;
+    /*switches positions smoothly*/
 }
 
 #startbtn {
-    justify-self: center; /*set itself to center*/
+    justify-self: center;
+    /*set itself to center*/
     background-color: grey;
     font-family: simplecat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 25px;
@@ -340,7 +377,17 @@ footer {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #f2f2f2;
     text-align: center;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
+    grid-template-columns: 70% 30%;
+}
+
+footer .leftcol {
+    grid-column: 1/2;
+}
+
+footer .rightcol {
+    grid-column: 2/3;
+    padding-top: 30px;
 }
 
 footer h1 {
@@ -408,10 +455,12 @@ th {
 
 .sub-box1 {
     display: grid;
-    grid-template-columns: 70% 30%; /*grid customizations for content in cats in social media*/
+    grid-template-columns: 70% 30%;
+    /*grid customizations for content in cats in social media*/
     grid-template-rows: 25% 35% 40%;
     align-items: start;
-    text-align: left; /*sets all text to stick to the left*/
+    text-align: left;
+    /*sets all text to stick to the left*/
     padding-bottom: 50px;
 }
 
@@ -477,9 +526,11 @@ th {
     display: grid;
     grid-template-columns: 49% 49%;
     grid-template-rows: 40vw 40vw;
-    justify-items: center; /*horizontally aligns items in its cell*/
+    justify-items: center;
+    /*horizontally aligns items in its cell*/
     gap: 30px;
-    perspective: 1000px; /*creates a 3d effect for rotateY*/
+    perspective: 1000px;
+    /*creates a 3d effect for rotateY*/
 }
 
 .sub-box3 div {
@@ -502,7 +553,8 @@ th {
 }
 
 .card1.flip .card {
-    transform: rotateY(180deg); /*smoothen its rotate around the Y axis, rotates around the Y axis for 180 degrees*/
+    transform: rotateY(180deg);
+    /*smoothen its rotate around the Y axis, rotates around the Y axis for 180 degrees*/
 }
 
 .card-front,
@@ -510,7 +562,8 @@ th {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /*hides the back element when its rotated in a 3d space*/
+    backface-visibility: hidden;
+    /*hides the back element when its rotated in a 3d space*/
     background-color: #ffcccc;
     border-radius: 20px;
     display: flex;
@@ -561,18 +614,18 @@ th {
     transform: rotateY(180deg);
 }
 
-.sub-box4{
+.sub-box4 {
     display: flex;
     flex-wrap: wrap;
 }
 
 .sub-box4 div {
-    flex: 0 0 48%;
+    flex: 0 0 50%;
     text-align: left;
     display: grid;
     grid-template-columns: 49% 49%;
     grid-template-rows: 25% 75%;
-    gap:5px;
+    gap: 5px;
     margin: 20px 0 20px 0;
     background-color: #bebe97;
     padding: 20px;
@@ -601,21 +654,28 @@ th {
     grid-column: 2/3;
 }
 
-#meme1{
-    all:unset;
+.sub-box4 .meme1,
+.sub-box4 .meme6 {
+    flex: 0 0 100%;
+}
+
+#meme1 {
+    all: unset;
     justify-self: center;
     border-radius: 25px;
     border: 3px solid black;
     width: 10vw;
     grid-row: 1/3;
     grid-column: 2/3;
-    height: 383px; /*properties of the img*/
+    height: 383px;
+    /*properties of the img*/
     width: 272px;
-    background: url("images/cat-memes-1&2.png") 0 0; /*image1 from sprite*/
+    background: url("images/cat-memes-1&2.png") 0 0;
+    /*image1 from sprite*/
 }
 
-#meme2{
-    all:unset;
+#meme2 {
+    all: unset;
     justify-self: center;
     border-radius: 25px;
     border: 3px solid black;
@@ -624,16 +684,19 @@ th {
     grid-column: 2/3;
     height: 325px;
     width: 178px;
-    background: url("images/cat-memes-1&2.png"); /*image2 from sprite*/
+    background: url("images/cat-memes-1&2.png");
+    /*image2 from sprite*/
     background-position: -273px 0;
 }
 
 #nyancat {
-    width: 20vw;
+    width: 15vw;
+    height: 12vh;
 }
 
 .remove {
-    display: none; /*makes element disappear*/
+    display: none;
+    /*makes element disappear*/
 }
 
 #sea-content {
@@ -672,7 +735,8 @@ area {
     width: 40vw;
 }
 
-@keyframes pop { /*makes an animation for the score on click*/
+@keyframes pop {
+    /*makes an animation for the score on click*/
 
     0%,
     100% {
@@ -697,92 +761,250 @@ area {
 }
 
 #score.pop {
-    animation: pop 0.3s; /*animation lasts for 0.3s scaling up and down*/
+    animation: pop 0.3s;
+    /*animation lasts for 0.3s scaling up and down*/
 }
 
-#timer.warning { /*during last 5 seconds (when .warning is applied), becomes red and bolded*/
+#timer.warning {
+    /*during last 5 seconds (when .warning is applied), becomes red and bolded*/
     color: red;
     font-weight: bold;
-    animation: pulse 1s infinite; /*animation lasts for 1s scaling up and down*/
+    animation: pulse 1s infinite;
+    /*animation lasts for 1s scaling up and down*/
 }
 
-#setup-form{
+#setup-form {
     font-size: 2vw;
-    font-family:oriental, 'Courier New', Courier, monospace ;
+    font-family: oriental, 'Courier New', Courier, monospace;
     padding-bottom: 20px;
     font-weight: bold;
 }
 
 #setup-form select {
-    padding:0.5vw;
+    padding: 0.5vw;
     font-size: 1.5vw;
-    font-family:oriental, 'Courier New', Courier, monospace ;
+    font-family: oriental, 'Courier New', Courier, monospace;
     font-weight: bold;
 }
 
-#table-container{
+#table-container {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
     justify-content: center;
 }
 
-#table-container table{
-    flex:0 0 45%; /*0: item doesnt grow if there is extra space, 0: item doesnt shrink if there is too little space, 45%: item has 45% base width of its flex container*/
+#table-container table {
+    flex: 0 0 45%;
+    /*0: item doesnt grow if there is extra space, 0: item doesnt shrink if there is too little space, 45%: item has 45% base width of its flex container*/
     box-sizing: border-box;
     margin-bottom: 20px;
 }
 
+#LOLcat,
+#longcat {
+    display: none;
+}
 
-@media (max-width:800px) { /*mobile RWD*/
+
+@media (max-width:800px) {
+    /*mobile RWD*/
+
+    main {
+        margin: 250px 20px 0 20px;
+    }
+
+    #catHeader.shrink~.navbar {
+        /*after scrolling, selects sibling ".navbar" (that comes after in html) and also sets its top to 200px*/
+        top: 100px;
+    }
+
+    #meowSoundsbutton {
+        font-size: 3vw;
+    }
+
+    #facts-button {
+        font-size: 4vw;
+    }
+
+    .navbar li button {
+        font-size: 3vw;
+    }
+
+    #main-content {
+        font-size: 4vw;
+    }
+
+    #catHeader.shrink {
+        /*shrunken banner after scrolled*/
+        height: 100px;
+    }
+
+    .content-box {
+        padding: 10px;
+        padding-top: 20px;
+    }
+
+    .content-box h3 {
+        font-size: 7vw;
+    }
+
+    footer h1 {
+        font-size: 10vw;
+    }
+
+    footer a {
+        font-size: 6vw;
+    }
+
+    #setup-form {
+        font-size: 4.5vw;
+    }
+
+    #startbtn {
+        width: 50%;
+    }
+
+    .content {
+        padding: 50px 20px 20px 20px;
+    }
+
+    .content-box p {
+        font-size: 4vw;
+    }
+
+    .board {
+        height: 350px;
+    }
+
+    #setup-form select {
+        font-size: 4vw;
+    }
+
     .image-container h2 {
-        font-size: 3.4vw;
+        font-size: 4vw;
+    }
+
+    .image-container h3 {
+        font-size: 3vw;
+    }
+
+    #dvwheader2 {
+        top: 55%;
     }
 
     #lcheader2 {
-        font-size: 1.6vw;
+        font-size: 2vw;
+        -webkit-text-stroke: 0.1px #000;
     }
 
-    .sub-box1 { /*changes cat memes and trend content to only 1 column*/
-        grid-template-columns: 100%;
-        grid-template-rows: 10% 20% 70%;
-    }
-
-    .sub-box1 img {
-        grid-column: 1/2;
-        grid-row: 3/4;
-        width: 60%;
-    }
-
+    .sub-box1,
     .sub-box2 {
+        /*changes cat memes and trend content to only 1 column*/
         grid-template-columns: 100%;
-        grid-template-rows: 10% 20% 70%; 
+        grid-template-rows: 10% 40% 50%;
     }
 
+    .sub-box1 img,
     .sub-box2 img {
         grid-column: 1/2;
         grid-row: 3/4;
         width: 60%;
     }
 
-    .navbar li { /*increases li width so clickable area expands and also makes a 2nd row for the list*/
+    .navbar li {
+        /*increases li width so clickable area expands and also makes a 2nd row for the list*/
         width: 33%;
     }
 
-    .navbar { /*more vertical area to fit in words*/
-        height: 100px;
+    .navbar {
+        /*more vertical area to fit in words*/
+        height: auto;
     }
 
-    #table-container table{ /*makes the base width 100% of its flex container*/
+    #table-container table {
+        /*makes the base width 100% of its flex container*/
         flex: 0 0 100%;
     }
 
-    th, td{
-        padding:12px; /*list boxes size increase*/
-        font-size: 2vw;
+    th,
+    td {
+        padding: 12px;
+        /*list boxes size increase*/
+        font-size: 3vw;
     }
 
-    th{
-        font-size: 2.5vw;
+    th {
+        font-size: 3.5vw;
     }
+
+    footer {
+        grid-template-columns: 100%;
+    }
+
+    .rightcol {
+        display: none;
+    }
+
+    #memeheader2 {
+        top: 35%;
+    }
+
+    .sub-box3 {
+        grid-template-columns: 100%;
+        grid-template-rows: 300px 300px 400px 350px;
+        gap: 20px;
+    }
+
+    .sub-box3 div {
+        grid-column: 1/2;
+        grid-row: auto;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .card-front img {
+        width: 40vw;
+    }
+
+    .card-front p,
+    .card-back p {
+        font-size: 4vw;
+    }
+
+    .sub-box4 div {
+        flex: 0 0 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px auto auto;
+        box-sizing: border-box;
+    }
+
+    #meme1,
+    #meme2,
+    .sub-box4 div img {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        width: 20vw;
+    }
+
+    .sub-box4 div h4 {
+        font-size: 4vw;
+    }
+
+    #LOLcat,
+    #longcat {
+        display: block;
+    }
+
+    #meme1, #meme2 {
+        display: none;
+    }
+
+    .countries {
+        padding: 15px;
+        font-size: 4.5vw;
+        margin: 10px;
+    }
+
+
 }
