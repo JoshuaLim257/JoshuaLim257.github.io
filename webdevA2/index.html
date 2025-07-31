@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cats</title>
+    <script src="main.js" defer></script> <!--JS-->
+    <link href="style.css" type="text/css" rel="stylesheet"> <!--CSS-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- get icons from https://www.favicon.cc -->
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <button class="settings-button settings1 scaledown"><img src="images/settings.png" alt="Settings" title="Settings"
+            id="settings"></button>
+    <button class="settings-button settings2 scaledown"><img src="images/fullscreen.png" alt="Fullscreen"
+            title="Fullscreen" id="fullscreen"></button>
+    <button class="settings-button settings2a scaledown remove"><img src="images/efullscreen.png" alt="Exit Fullscreen"
+            title="Exit Fullscreen" id="fullscreen2"></button>
+    <button class="settings-button settings3 scaledown"><img src="images/refresh.png" alt="Refresh" title="Refresh"
+            id="refresh"></button>
+    <header id="catHeader"> <!--Background image for when site starts/top banner for website-->
+        <img src="images/cat-background-1.jpg" alt="Cat banner" class="cat-image" title="Banner">
+        <h1 class="title">Cats</h1> <!--center title in the middle of the image-->
+    </header> <!--Multiple audios for meowing noises-->
+    <audio id="meowSound1" src="audios/meow1.mp3"></audio>
+    <audio id="meowSound2" src="audios/meow2.mp3"></audio>
+    <audio id="meowSound3" src="audios/meow3.mp3"></audio>
+    <audio id="meowSound4" src="audios/meow4.mp3"></audio>
+    <audio id="meowSound5" src="audios/meow5.mp3"></audio>
+    <audio id="meowSound6" src="audios/meow6.mp3"></audio>
+    <nav class="navbar">
+        <ul> <!--Nav list for website navigation-->
+            <li><button id="page1btn">Home</button></li> <!--buttons in a list to toggle through subpages-->
+            <li><button id="page2btn">Life of A Cat</button></li>
+            <li><button id="page3btn">Domestic and Wild</button></li>
+            <li><button id="page4btn">Cats Around Us</button></li>
+            <li><button id="page5btn">Cats in Social Media</button></li>
+            <li><button id="meowSoundsbutton">Play Meows</button></li>
+            <!--Meowing noises which can be turned on and off (plays every 7 seconds)-->
+        </ul>
+    </nav>
+    <main id="pagecontainer"> <!--subtopic pages are in here (home shows on default)-->
+        <section class="page" id="page1"> <!--home page-->
+            <div class="image-container">
+                <img src="images/cat-background-home.jpg" alt="Home Page Banner" title="Homepage Banner"
+                    class="page-banners"> <!--Home Banner-->
+                <h2 id="homeheader1">Welcome to the World of Cats</h2> <!--Text in image-->
+                <h3 id="homeheader2">Discover their lives, beauty and global charm.</h3>
+            </div>
+            <article class="content"> <!--All content goes in here-->
+                <div class="content-box">
+                    <p id="main-content">Whether you're a curious cat lover, a pet parent, or just someone who enjoys
+                        cat memes, this site
+                        will walk you through the fascinating lives of cats, from household companions to wild
+                        predators,
+                        and even viral sensations on social media.</p>
+                    <br>
+                    <br>
+                    <button id="facts-button">Random Cat Fact</button> <!--Button generates a random fact on click-->
+                    <br>
+                    <br>
+                    <p id="cat-fact">Click for a fact</p> <!--Fact shows up here-->
+                    <br>
+                    <br>
+                    <h3>Minigame</h3> <!--Laser aim train minigame-->
+                    <div class="settings-form"> <!--form data-->
+                        <form id="setup-form"> <!--Choosing difficulty to set the size of the laser (1px, 2px 4px)-->
+                            <label for="difficulty">Difficulty:</label>
+                            <select id="difficulty">
+                                <option value="easy">Easy</option>
+                                <option value="medium" selected>Medium</option> <!--selected = default value-->
+                                <option value="hard">Hard</option>
+                            </select>
+                        </form>
+                    </div>
+                    <p id="startbtn">Start Game</p> <!--Starts game when button starts, laser score and timer appears-->
+                    <p id="score" class="remove">Score</p> <!--Stays hidden till game starts-->
+                    <p id="timer" class="remove">Time: 15</p> <!--Stays hidden till game starts-->
+                    <div class="board">
+                        <img src="images/laser.jpg" alt="laser" id="laser" class="remove">
+                        <!--Stays hidden till game starts-->
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="page" id="page2"> <!--life of cat-->
+            <div class="image-container">
+                <img src="images/cat-background-lc.jpg" alt="Cats' Life Banner" title="Cats' Life Banner"
+                    class="page-banners"> <!--life of a cat banner-->
+                <h2 id="lcheader1">Understanding and Caring for Cats Through Every Life Stage</h2> <!--text in banner-->
+                <h3 id="lcheader2">This section explores how cats grow, what they need at each stage, and how you can
+                    keep them healthy, happy, and thriving.</h3>
+            </div>
+            <article class="content" id="contentpage2">
+                <div>
+                    <img src="images/cat-lc.png" alt="Cat Life Cycle" title="Cat Life Cycle" id="catlc">
+                    <!--picture of cat in life cycle-->
+                </div>
+                <div class="content-box" id="table-container"> <!--tables placed in here-->
+                    <!--800px: 1 col, >800px: 2col-->
+                    <table>
+                        <tr>
+                            <th>Life Stage</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>Kitten (0-6 months)</td>
+                            <td>
+                                They are born after a gestation period of 63-65 days.<br>
+                                They are born without a sense of sight or sound. Only relying on smell and touch.<br>
+                                After a few weeks they develop their senses and can learn to walk.<br>
+                                Best time for positive introductions towards the cat.<br>
+                                They start teething at 2 weeks but gets replaced by adult teeth after 2 months.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Junior (6 months - 2 years)</td>
+                            <td>
+                                Starts to show its full personality.<br>
+                                Reaches sexual maturity and full size.<br>
+                                Energetic and curious.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Small Adult (2-6 years)</td>
+                            <td>
+                                Fully grown and physically mature.<br>
+                                Stable behaviour, healthiest life stage
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Big Adult (6-10 years)</td>
+                            <td>
+                                Early signs of aging begin: slower movement and weight gain.<br>
+                                Needs more monitoring of health and care.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Senior (11+ years)</td>
+                            <td>
+                                Noticeable aging: less active and more sleeping.<br>
+                                Needs a calm environment and regular vet visits.
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Care Item</th>
+                            <th>What to Know</th>
+                        </tr>
+                        <tr>
+                            <td>🥣 Food</td>
+                            <td>High-quality cat food based on age & health. Free feeding OK for some; others need
+                                measured meals.</td>
+                        </tr>
+                        <tr>
+                            <td>💧 Water</td>
+                            <td>Fresh, clean water daily. Many cats prefer running water - consider a cat fountain.</td>
+                        </tr>
+                        <tr>
+                            <td>🧴 Litter Box</td>
+                            <td>Clean at least once a day. 1 box per cat, plus one extra.</td>
+                        </tr>
+                        <tr>
+                            <td>🛏️ Space</td>
+                            <td>Safe, quiet resting places. Cats love warm, elevated spots.</td>
+                        </tr>
+                        <tr>
+                            <td>🧸 Toys</td>
+                            <td>Mental stimulation & play prevent boredom. Include chase, puzzle, and solo-play toys.
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Task</th>
+                            <th>Frequency</th>
+                            <th>Tips</th>
+                        </tr>
+                        <tr>
+                            <td>🧽 Brushing</td>
+                            <td>Weekly (daily for longhair)</td>
+                            <td>Helps reduce shedding & hairballs</td>
+                        </tr>
+                        <tr>
+                            <td>✂️ Nail trimming</td>
+                            <td>Every 2-4 weeks</td>
+                            <td>Use cat clippers; avoid cutting the quick</td>
+                        </tr>
+                        <tr>
+                            <td>🦷 Dental care</td>
+                            <td>Weekly ideally</td>
+                            <td>Finger brushes or dental treats help</td>
+                        </tr>
+                        <tr>
+                            <td>🛁 Bathing (optional)</td>
+                            <td>Rarely needed</td>
+                            <td>Only if dirty or for medical reasons</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Age/Stage</th>
+                            <th>Care Needed</th>
+                        </tr>
+                        <tr>
+                            <td>🐾 Kittens</td>
+                            <td>Multiple vaccines (FVRCP, rabies), deworming, spay/neuter</td>
+                        </tr>
+                        <tr>
+                            <td>🐾 Adults</td>
+                            <td>Yearly checkups, booster shots</td>
+                        </tr>
+                        <tr>
+                            <td>🐾 Seniors (10+)</td>
+                            <td>Twice-yearly checkups, senior blood work</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Condition</th>
+                            <th>Signs to Watch For</th>
+                        </tr>
+                        <tr>
+                            <td>😿 Hairballs</td>
+                            <td>Frequent coughing or vomiting</td>
+                        </tr>
+                        <tr>
+                            <td>🚽 UTI/bladder issues</td>
+                            <td>Frequent/little urination, vocalizing</td>
+                        </tr>
+                        <tr>
+                            <td>🍽️ Obesity</td>
+                            <td>Weight gain, low energy</td>
+                        </tr>
+                        <tr>
+                            <td>😶‍🌫️ Dental disease</td>
+                            <td>Bad breath, tooth loss, drooling</td>
+                        </tr>
+                        <tr>
+                            <td>🐛 Parasites</td>
+                            <td>Fleas, ticks, worms (look for itching, scooting, or vomiting worms)</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+        </section>
+        <section class="page" id="page3"> <!--domestic and wild-->
+            <div class="image-container">
+                <img src="images/cat-background-dvw.jpg" alt="Domestic and Wild Cat Banner"
+                    title="Domestic vs Wild Banner" class="page-banners"> <!--page banner-->
+                <h2 id="dvwheader1">Tamed or Untamed: The Two Worlds of Cats</h2> <!--text in img-->
+                <h3 id="dvwheader2">Compare and understand the two sides of the cat world.</h3>
+            </div>
+            <article class="content">
+                <div class="content-box">
+                    <table> <!--1st table-->
+                        <tr>
+                            <th>Feature</th>
+                            <th>Domestic</th>
+                            <th>Wild</th>
+                        </tr>
+                        <tr>
+                            <td>Species</td>
+                            <td>Felis Catus</td>
+                            <td>Varies: Panthera, Felis, Lynx, etc.</td>
+                        </tr>
+                        <tr>
+                            <td>Size</td>
+                            <td>Small (2-6kg)</td>
+                            <td>Varies from 4kg - >200kg</td>
+                        </tr>
+                        <tr>
+                            <td>Lifespan</td>
+                            <td>12-18 years</td>
+                            <td>6-15 years</td>
+                        </tr>
+                        <tr>
+                            <td>Diet</td>
+                            <td>Commercial meat-based food</td>
+                            <td>Hunting for live prey</td>
+                        </tr>
+                        <tr>
+                            <td>Habitat</td>
+                            <td>Owned indoors</td>
+                            <td>Forests, Mountains, Savannahs</td>
+                        </tr>
+                        <tr>
+                            <td>Socialization</td>
+                            <td>Social around humans and pets</td>
+                            <td>Usually solitary or small family units</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <h2>Origins & Domestication</h2> <!--normal content-->
+                    <p>- Originated from African wildcats in the Fertile Crescent and Egypt ~10,000 12,000 years ago.
+                    </p>
+                    <p>- Evolution through self-domestication, as less fearful wildcats were tolerated by humans for
+                        pest control.</p>
+                    <p>- Genetic studies confirm a single-lineage descent from Felis lybica.</p>
+                    <br>
+                    <h2>Shared Traits</h2>
+                    <p>- Both have excellent night vision and retractable claws.</p>
+                    <p>- DNA similarities: domestic cats share over 95% of their genetic makeup with wild cats like </p>
+                    <p>- Strong territorial instincts and play behaviours derived from hunting techniques.</p>
+                </div>
+            </article>
+        </section>
+        <section class="page" id="page4"> <!--cats in sea-->
+            <div class="image-container">
+                <img src="images/cat-background-sea.jpg" alt="Cat infront of temple Banner" title="Asian Cats Banner"
+                    class="page-banners"> <!--page banner-->
+                <h2 id="seaheader1">Felines across Southeast Asia</h2>
+                <h3 id="seaheader2">Unique cat breeds from the Bornean Bay to other regional breeds.</h3>
+            </div>
+            <article class="content">
+                <div class="content-box" id="sea-content">
+                    <img src="images/sea-map.jpg" alt="Southeast Asia Map" usemap="#image-map" id="sea-map">
+                    <!--image map-->
+                    <map name="image-map"> <!--click on country name to view its' cats-->
+                        <area id="Myanmar" title="Myanmar" alt="Myanmar" coords="5,81,77,97" shape="rect" href="#">
+                        <area id="Vietnam" title="Vietnam" alt="Vietnam" coords="121,79,183,95" shape="rect" href="#">
+                        <area id="Laos" title="Laos" alt="Laos" coords="101,105,139,122" shape="rect" href="#">
+                        <area id="Thailand" title="Thailand" alt="Thailand" coords="74,147,140,163" shape="rect"
+                            href="#">
+                        <area id="Philippines" title="Philippines" alt="Philippines" coords="297,129,377,146"
+                            shape="rect" href="#">
+                        <area id="Cambodia" title="Cambodia" alt="Cambodia" coords="118,181,189,196" shape="rect"
+                            href="#">
+                        <area id="Malaysia" title="Malaysia" alt="Malaysia" coords="113,253,182,269" shape="rect"
+                            href="#">
+                        <area id="Brunei" title="Brunei" alt="Brunei" coords="219,249,272,262" shape="rect" href="#">
+                        <area id="Singapore" title="Singapore" alt="Singapore" coords="136,293,215,308" shape="rect"
+                            href="#">
+                        <area id="Indonesia" title="Indonesia" alt="Indonesia" coords="208,338,287,351" shape="rect"
+                            href="#">
+                        <area id="East-Timor" title="East Timor" alt="East Timor" coords="303,478,384,495" shape="rect"
+                            href="#">
+                    </map>
+                    <div class="countries">
+                        <div id="country-base"> <!--cats info pops up here when country is clicked-->
+                            Click a country's name to view it's regional breeds.
+                        </div>
+                        <div class="country" id="country1">
+                            <!--list of countries and their regional cat breed/common cats breed-->
+                            <h3>Myanmar: Burmese Cat</h3>
+                            <p>Burmese cats are known for their affectionate, people-oriented nature and silky, short
+                                coats. Originating in Myanmar, they are muscular yet elegant, often forming strong bonds
+                                with their human companions.</p>
+                            <img src="images/sea-myanmar.jpg" alt="Burmese" title="Burmese">
+                        </div>
+                        <div class="country" id="country2">
+                            <h3>Vietnam: Domestic Shorthair</h3>
+                            <p>Vietnam does not have a recognized regional cat breed, but domestic shorthairs are widely
+                                kept as pets throughout the country. These cats are typically mixed-breed, short-coated,
+                                and well-adapted to Vietnam's climate and lifestyle, serving as both companions and
+                                natural pest controllers.</p>
+                            <img src="images/sea-vietnam.jpg" alt="Domestic Shorthair from vietnam"
+                                title="Domestic Shorthair">
+                        </div>
+                        <div class="country" id="country3">
+                            <h3>Laos: Siamese</h3>
+                            <p>Siamese cats are the most common breed found in Laos, admired for their sleek bodies and
+                                striking blue almond-shaped eyes. Although they originate from Thailand, their presence
+                                is widespread throughout Southeast Asia, including Laos. Known for their vocal and
+                                social personalities, Siamese cats make affectionate and engaging companions in many
+                                Laotian households.</p>
+                            <img src="images/sea-laos.jpg" alt="Siamese" title="Siamese">
+                        </div>
+                        <div class="country" id="country4">
+                            <h3>Thailand: Korat</h3>
+                            <p>The Korat is a rare and ancient cat breed from Thailand, easily recognized by its
+                                shimmering silver-blue coat and large, luminous green eyes. Traditionally regarded as a
+                                symbol of good luck and prosperity, Korats are affectionate, intelligent, and form
+                                strong bonds with their owners.</p>
+                            <img src="images/sea-thailand.jpg" alt="Korat" title="Korat">
+                        </div>
+                        <div class="country" id="country5">
+                            <h3>Philippines: Persian</h3>
+                            <p>Persian cats are a common and popular breed found in the Philippines, admired for their
+                                long, luxurious coats and calm, gentle personalities. The Philippines does not have a
+                                recognized regional cat breed, so many households keep imported breeds like Persians as
+                                pets. Despite the tropical climate, Filipino cat owners cherish Persians for their
+                                affectionate nature and striking appearance.</p>
+                            <img src="images/sea-php.jpg" alt="Persian" title="Persian">
+                        </div>
+                        <div class="country" id="country6">
+                            <h3>Cambodia: Domestic Shorthair</h3>
+                            <p>Cambodia does not have any recognized regional cat breeds, with domestic shorthairs being
+                                the most common type of cat found throughout the country. These mixed-breed cats are
+                                adaptable, resilient, and valued as both companions and natural pest controllers in
+                                Cambodian households.</p>
+                            <img src="images/sea-cam.jpg" alt="Domestic Shorthair from Cambodia"
+                                title="Domestic Shorthair">
+                        </div>
+                        <div class="country" id="country7">
+                            <h3>Malaysia: British Shorthair</h3>
+                            <p>Malaysia does not have a recognized regional cat breed, but British Shorthairs are a
+                                popular imported breed there. Known for their calm demeanor and dense, plush coats,
+                                British Shorthairs are cherished by many Malaysian cat owners despite the tropical
+                                climate.</p>
+                            <img src="images/sea-malay.jpg" alt="British Shorthair from Malaysia"
+                                title="British Shorthair">
+                        </div>
+                        <div class="country" id="country8">
+                            <h3>Brunei: Bornean Bay</h3>
+                            <p>The Bornean Bay Cat is a rare and elusive wild cat native to the forests of Borneo,
+                                including Brunei. It is a small, reddish-brown feline species that is poorly understood
+                                due to its secretive nature and limited sightings in the wild.</p>
+                            <img src="images/sea-brunei.jpg" alt="Bornean Bay Cat" title="Bornean Bay">
+                        </div>
+                        <div class="country" id="country9">
+                            <h3>Singapore: Singapura</h3>
+                            <p>The Singapura cat is a small, muscular breed originating from Singapore, known for its
+                                large eyes and ears and a distinctive sepia-toned coat. It is one of the smallest
+                                domesticated cat breeds and is prized for its playful and affectionate personality.</p>
+                            <img src="images/sea-sg.jpg" alt="Singapura" title="Singapura">
+                        </div>
+                        <div class="country" id="country10">
+                            <h3>Indonesia: Balinese</h3>
+                            <p>The Balinese cat is a long-haired variety of the Siamese breed, known for its silky coat,
+                                striking blue eyes, and elegant build. Although it takes its name from the Indonesian
+                                island of Bali, the breed was actually developed in the United States and is admired for
+                                its playful, vocal, and affectionate nature.</p>
+                            <img src="images/sea-indo.jpg" alt="Balinese" title="Balinese">
+                        </div>
+                        <div class="country" id="country11">
+                            <h3>East Timor: Domestic Shorthair</h3>
+                            <p>Domestic Shorthair cats are the most common type of cats found in East Timor, known for
+                                their diverse colors and adaptable nature. These mixed-breed cats thrive in the tropical
+                                climate, serving as both beloved pets and effective hunters of household pests.</p>
+                            <img src="images/sea-timor.jpg" alt="Domestic Shorthair from East Timor"
+                                title="Domestic Shorthair">
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="page" id="page5"> <!--cats online-->
+            <div class="image-container">
+                <img src="images/cat-background-memes.gif" alt="Nyan Cat Banner" title="Cat Memes Banner"
+                    class="page-banners"> <!--page banner-->
+                <h2 id="memeheader1">The Rise of Cat Memes</h2> <!--text in banner-->
+                <h3 id="memeheader2">Learn how cats have made their influence onto the internet.</h3>
+            </div>
+            <article class="content">
+                <div class="content-box">
+                    <h2>Why cats dominate the internet?</h2><br> <!--subtopic header-->
+                    <h3>Cats are the purr-fect viral stars</h3><br> <!--subheader-->
+                    <div class="sub-box1">
+                        <h4>They're unpredictable.</h4>
+                        <p>Cats often act in bizarre, hilarious and shocking ways such as jumping off fridges,
+                            attacking
+                            invisible foes or fitting into boxes way too small. Their behaviour is exactly ideal for a
+                            short-form video like TikTok, Instagram Reels, GIFs and memes.</p>
+                        <img src="images/cat-memes-unpre.gif" alt="unpredictable cat gif" title="unpredictable cat gif">
+                    </div>
+                    <div class="sub-box2">
+                        <h4>They're extremely expressive</h4>
+                        <p>From judging-stares to wide eyed curiosity, they have very readable expressions. Combining
+                            that with meme captions and it becomes every human mood.</p>
+                        <img src="images/cat-memes-stare.gif" alt="cat staring gif" title="cat being expressive">
+                    </div>
+                    <h2>Famous Internet Cats</h2>
+                    <h3>Meow-nificient Celebrities That Broke The Internet</h3>
+                    <div class="sub-box3"> <!--famous cats-->
+                        <div class="card_ card1"> <!--click on card and it flips 180 deg, "3d" anim-->
+                            <div class="card">
+                                <div class="card-front"> <!--front of card-->
+                                    <img src="images/cat-memes-grumpy.jpg" alt="Grumpy Cat" title="Grumpy Cat">
+                                    <p>Grumpy Cat</p>
+                                </div>
+                                <div class="card-back"> <!--back of card-->
+                                    <p>Name: Tardar Sauce</p>
+                                    <p>Breed: Mixed (Snowshoe + Domestic Shorthair)</p><br>
+                                    <p>From USA, she was commonly known for its grumpy face due to feline dwarfism. It
+                                        went viral in 2012, appearing in books, commercials and her own movie.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_ card2">
+                            <div class="card">
+                                <div class="card-front"> <!--front of card-->
+                                    <img src="images/cat-memes-nala.jpg" alt="Nala Cat" title="Nala Cat">
+                                    <p>Nala Cat</p>
+                                </div>
+                                <div class="card-back"> <!--back of card-->
+                                    <p>Nala Cat</p>
+                                    <p>Breed: Siamese-Tabby</p><br>
+                                    <p>She was adopted in the year 2000 from an animal shelter in USA. She is known for
+                                        being the most followed cat on Instagram, having a whopping 5 million followers,
+                                        winning a Guinness World Record. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_ card3">
+                            <div class="card">
+                                <div class="card-front"> <!--front of card-->
+                                    <img src="images/cat-memes-bub.jpg" alt="Lil Bub" title="Pic of Lil Bub">
+                                    <p>Lil Bub</p>
+                                </div>
+                                <div class="card-back"> <!--back of card-->
+                                    <p>Name: Lil Bub</p>
+                                    <p>Breed: Domestic Shorthair (mix-breed)</p><br>
+                                    <p>She is known for her tiny tongue-out smile due to a genetic mutation. She went
+                                        viral in 2011 from TV interviews, documentaries and music collaborations. Before
+                                        leaving, she had overcame great health challenges and raised over $500k for
+                                        animals in need.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_ card4">
+                            <div class="card">
+                                <div class="card-front"> <!--front of card-->
+                                    <img src="images/cat-memes-maru.jpg" alt="Maru the Cat" title="Pic of Maru">
+                                    <p>Maru</p>
+                                </div>
+                                <div class="card-back"> <!--back of card-->
+                                    <p>Maru</p>
+                                    <p>Breed: Scottish Straight</p><br>
+                                    <p>From Japan, she is one of the first viral cats on YouTube, accumulating over 500
+                                        million views. She went viral since 2008 for her obsession with boxes and her
+                                        awkward landings. She is featured in ads and children's books. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>Cat memes and trends</h2><br> <!--list of cat memes-->
+                    <h3>Me-meow-rable moments in meme history</h3><br>
+                    <div class="sub-box4">
+                        <div class="meme1">
+                            <h4>I Can Has Cheezburger (2006)</h4>
+                            <p>The first of many LOLcat memes which started a viral empire, featuring cats with
+                                intentionally bad grammar. This started entire websites, books and a cultural language.
+                            </p>
+                            <div id="meme1"></div>
+                            <img src="images/cat-memes-1.jpg" alt="LOLcat" title="LOLcat" id="LOLcat">
+                        </div>
+                        <div class="meme2">
+                            <h4>Longcat (2007)</h4>
+                            <p>An image of an unusually long white cat which became a meme format. </p>
+                            <div id="meme2"></div>
+                            <img src="images/cat-memes-2.jpeg" alt="longcat" title="longcat" id="longcat">
+                        </div>
+                        <div class="meme3">
+                            <h4>Nyan Cat (2010)</h4>
+                            <p>An animated cat with a pop-tart body, flying through space and leaving a rainbow trail.
+                                It was also accompanied with catchy tune playing.</p>
+                            <img src="images/cat-background-memes.gif" alt="nyan cat" title="nyan cat" id="nyancat">
+                        </div>
+                        <div class="meme4">
+                            <h4>Cats vs Cucumbers (2015)</h4>
+                            <p>Viral videos showed cats leaping in terror at cucumbers being placed behind them. </p>
+                            <img src="images/cat-memes-4.gif" alt="cats and cucumbers" title="cats and cucumbers">
+                        </div>
+                        <div class="meme5">
+                            <h4>Cat Reaction Videos (2020)</h4>
+                            <p>Tiktok rising with trends like reacting to their owners “disappearing”, “meowing at them”
+                                or “crying”.</p>
+                            <img src="images/cat-memes-5.gif" alt="cat reacting" title="cat reacting">
+                        </div>
+                        <div class="meme6">
+                            <h4>Chipi Chipi Chapa Chapa (2024)</h4>
+                            <p>A dancing CGI cat bouncing to the catchy tune of sped-up Russian Song.</p>
+                            <img src="images/cat-memes-6.gif" alt="chipi" title="chipi chipi">
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer1"> <!--footers which correspond to the current subtopic user is on-->
+        <div class="leftcol">
+            <h1>Credits</h1>
+            <a href="https://catfact.ninja" target="_blank">Cat Facts</a>
+        </div>
+        <div class="rightcol">
+            <img src="images/qrcode.png" alt="QR Code" title="QR Code">
+        </div>
+        <p>01_Joshua_253264Z</p>
+    </footer>
+    <footer class="footer" id="footer2">
+        <div class="leftcol">
+            <h1>Credits</h1>
+            <a href="https://www.geeksforgeeks.org/biology/life-cycle-of-cat/" target="_blank">Cat's Life Cycle -
+                geeksforgeeks</a><br>
+            <a href="https://catfriendly.com/life-stages/" target="_blank">Life Stages - catfriendly</a><br>
+            <a href="https://x.com/yeagars/status/1487667277122215937" target="_blank">Life Cycle Image - X</a><br>
+            <a href="https://www.freshstep.com/cat-care/the-6-life-stages-of-your-feline" target="_blank">Life Stages -
+                freshstep</a><br>
+            <a href="https://middlecreekvet.com/cat-life-stages" target="_blank">Life Stages - middlecreekvet</a>
+        </div>
+        <div class="rightcol">
+            <img src="images/qrcode.png" alt="QR Code" title="QR Code">
+        </div>
+        <p>01_Joshua_253264Z</p>
+    </footer>
+    <footer class="footer" id="footer3">
+        <div class="leftcol">
+            <h1>Credits</h1>
+            <a href="https://panthera.org/cat/small-cats" target="_blank">Domestic Cats - panthera</a><br>
+            <a href="https://www.alleycat.org/resources/the-natural-history-of-the-cat/" target="_blank">History of Cats
+                -
+                alleycat</a><br>
+            <a href="https://www.petmojo.com/how-are-house-cats-similar-to-big-cats" target="_blank">Comparison -
+                petmojo</a>
+        </div>
+        <div class="rightcol">
+            <img src="images/qrcode.png" alt="QR Code" title="QR Code">
+        </div>
+        <p>01_Joshua_253264Z</p>
+    </footer>
+    <footer class="footer" id="footer4">
+        <div class="leftcol">
+            <h1>Credits</h1>
+            <a href="https://www.thesprucepets.com/cat-breeds-from-asia-4801450" target="_blank">Cat Breeds in Asia -
+                thesprucepets</a>
+        </div>
+        <div class="rightcol">
+            <img src="images/qrcode.png" alt="QR Code" title="QR Code">
+        </div>
+        <p>01_Joshua_253264Z</p>
+    </footer>
+    <footer class="footer" id="footer5">
+        <div class="leftcol">
+            <h1>Credits</h1>
+            <a href="https://www.bbc.co.uk/newsround/33848745#:~:text=Almost%20half%20of%20all%20original,owners%20posted%20their%20pictures%20online"
+                target="_blank">Cats Online - BBC</a><br>
+            <a href="https://meme-cats.fandom.com/wiki/Meme_Cats_Wiki" target="_blank">Cat Memes</a>
+        </div>
+        <div class="rightcol">
+            <img src="images/qrcode.png" alt="QR Code" title="QR Code">
+        </div>
+        <p>01_Joshua_253264Z</p>
+    </footer>
+
+</body>
+
+</html>
